@@ -27,7 +27,7 @@ router
 ], createAlumnos);
 
 router
-.route('/:legajo')
+.route('/:leg_alumno')
 .get(getAlumno)
 .put(updateAlumno)
 .delete(deleteAlumno)

@@ -23,7 +23,7 @@ exports.router
     validar_campos_1.validarCampos
 ], alumno_controller_1.createAlumnos);
 exports.router
-    .route('/:legajo')
+    .route('/:leg_alumno')
     .get(alumno_controller_1.getAlumno)
     .put(alumno_controller_1.updateAlumno)
     .delete(alumno_controller_1.deleteAlumno);

@@ -103,7 +103,12 @@ const deleteAlumno = (req, res) => __awaiter(void 0, void 0, void 0, function* (
                 msg: `No se encontró un alumno con el legajo ${req.params.leg_alumno}`
             });
         }
-        yield typeorm_1.getRepository(Alumnos_1.Alumnos).delete(req.params.leg_alumno);
+        yield typeorm_1.getConnection()
+            .createQueryBuilder()
+            .delete()
+            .from(Alumnos_1.Alumnos)
+            .where('leg_alumno = :leg_alumno', { leg_alumno: req.params.leg_alumno })
+            .execute();
         return res.status(201).json({
             ok: true,
             msg: 'Alumnos borrado exitosamente'

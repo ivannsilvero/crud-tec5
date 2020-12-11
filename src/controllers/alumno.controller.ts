@@ -5,7 +5,7 @@
 
 import { Request, Response } from 'express';
 import { Alumnos } from '../entity/Alumnos';
-import { getRepository } from 'typeorm';
+import { getRepository, getConnection } from 'typeorm';
 
 export const getAlumnos = async (_: Request, res: Response):Promise<Response> => {
 
@@ -115,15 +115,20 @@ export const deleteAlumno = async (req: Request, res: Response):Promise<Response
     const alumno = await getRepository(Alumnos).findOne(req.params.leg_alumno);
     
     try {
-        
+
         if ( !alumno ) {
             return res.status(404).json({
                 ok: false,
                 msg: `No se encontró un alumno con el legajo ${ req.params.leg_alumno }`
             });
         }
-    
-        await getRepository(Alumnos).delete(req.params.leg_alumno)
+
+        await getConnection()
+            .createQueryBuilder()
+            .delete()
+            .from(Alumnos)
+            .where('leg_alumno = :leg_alumno', { leg_alumno: req.params.leg_alumno })
+            .execute();
     
         return res.status(201).json({
             ok: true,
