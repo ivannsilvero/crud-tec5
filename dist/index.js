@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 require("reflect-metadata");
 const express_1 = __importDefault(require("express"));
+const cors_1 = __importDefault(require("cors"));
 const typeorm_1 = require("typeorm");
 const index_routes_1 = require("./routes/index.routes");
 const Alumnos_1 = require("./entity/Alumnos");
@@ -32,6 +33,7 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
     const PORT = process.env.PORT || 4000;
     app.use(express_1.default.json());
     app.use(express_1.default.urlencoded({ extended: false }));
+    app.use(cors_1.default());
     app.use(index_routes_1.app);
     app.use(express_1.default.static(path_1.default.resolve(__dirname, '../public')));
     app.listen(PORT, () => {

@@ -22,11 +22,11 @@ const getAlumnos = (_, res) => __awaiter(void 0, void 0, void 0, function* () {
 exports.getAlumnos = getAlumnos;
 const getAlumno = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const alumno = yield typeorm_1.getRepository(Alumnos_1.Alumnos).findOne(req.params.id);
+        const alumno = yield typeorm_1.getRepository(Alumnos_1.Alumnos).findOne(req.params.leg_alumno);
         if (!alumno) {
             return res.status(404).json({
                 ok: false,
-                msg: `No se encontró un alumno con el id ${req.params.id}`
+                msg: `No se encontró un alumno con el legajo ${req.params.leg_alumno}`
             });
         }
         return res.status(201).json({
@@ -45,11 +45,11 @@ const getAlumno = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 exports.getAlumno = getAlumno;
 const createAlumnos = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const alumno = yield typeorm_1.getRepository(Alumnos_1.Alumnos).findOne(req.body.dni_alumno);
+        const alumno = yield typeorm_1.getRepository(Alumnos_1.Alumnos).findOne(req.body.leg_alumno);
         if (alumno) {
             return res.status(400).json({
                 ok: false,
-                msg: 'Ya existe un alumno con ese DNI'
+                msg: 'Ya existe un alumno con ese legajo'
             });
         }
         const newAlumno = typeorm_1.getRepository(Alumnos_1.Alumnos).create(req.body);
@@ -69,19 +69,19 @@ const createAlumnos = (req, res) => __awaiter(void 0, void 0, void 0, function* 
 });
 exports.createAlumnos = createAlumnos;
 const updateAlumno = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const alumno = yield typeorm_1.getRepository(Alumnos_1.Alumnos).findOne(req.params.id);
+    const alumno = yield typeorm_1.getRepository(Alumnos_1.Alumnos).findOne(req.params.leg_alumno);
     try {
         if (!alumno) {
             return res.status(404).json({
                 ok: false,
-                msg: `No se encontró un alumno con el id ${req.params.id}`
+                msg: `No se encontró un alumno con el legajo ${req.params.leg_alumno}`
             });
         }
         typeorm_1.getRepository(Alumnos_1.Alumnos).merge(alumno, req.body);
         const result = yield typeorm_1.getRepository(Alumnos_1.Alumnos).save(alumno);
         return res.status(201).json({
             ok: true,
-            msg: 'Alumnos actualizado exitosamente',
+            msg: 'Alumno actualizado exitosamente',
             result
         });
     }
@@ -95,19 +95,18 @@ const updateAlumno = (req, res) => __awaiter(void 0, void 0, void 0, function* (
 });
 exports.updateAlumno = updateAlumno;
 const deleteAlumno = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const alumno = yield typeorm_1.getRepository(Alumnos_1.Alumnos).findOne(req.params.id);
+    const alumno = yield typeorm_1.getRepository(Alumnos_1.Alumnos).findOne(req.params.leg_alumno);
     try {
         if (!alumno) {
             return res.status(404).json({
                 ok: false,
-                msg: `No se encontró un alumno con el id ${req.params.id}`
+                msg: `No se encontró un alumno con el legajo ${req.params.leg_alumno}`
             });
         }
-        const result = yield typeorm_1.getRepository(Alumnos_1.Alumnos).delete(req.params.id);
+        yield typeorm_1.getRepository(Alumnos_1.Alumnos).delete(req.params.leg_alumno);
         return res.status(201).json({
             ok: true,
-            msg: 'Alumnos borrado exitosamente',
-            result
+            msg: 'Alumnos borrado exitosamente'
         });
     }
     catch (error) {

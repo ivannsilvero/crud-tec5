@@ -51,12 +51,12 @@ export const createAlumnos = async (req: Request, res: Response):Promise<Respons
 
     try {
 
-        const alumno = await getRepository(Alumnos).findOne( req.body.dni_alumno );
+        const alumno = await getRepository(Alumnos).findOne( req.body.leg_alumno );
 
         if ( alumno ) {
             return res.status(400).json({
                 ok: false,
-                msg: 'Ya existe un alumno con ese DNI'
+                msg: 'Ya existe un alumno con ese legajo'
             });
         }
 
@@ -88,7 +88,7 @@ export const updateAlumno = async (req: Request, res: Response):Promise<Response
         if ( !alumno ) {
             return res.status(404).json({
                 ok: false,
-                msg: `No se encontró un alumno con el id ${ req.params.leg_alumno }`
+                msg: `No se encontró un alumno con el legajo ${ req.params.leg_alumno }`
             });
         }
 
@@ -119,7 +119,7 @@ export const deleteAlumno = async (req: Request, res: Response):Promise<Response
         if ( !alumno ) {
             return res.status(404).json({
                 ok: false,
-                msg: `No se encontró un alumno con el id ${ req.params.leg_alumno }`
+                msg: `No se encontró un alumno con el legajo ${ req.params.leg_alumno }`
             });
         }
     
