@@ -5,7 +5,7 @@
 import { Router } from 'express';
 import { check } from 'express-validator';
 import { validarCampos } from '../middlewares/validar-campos';
-import { getAlumnos, createAlumnos, getAlumno, updateAlumno, deleteAlumno } from '../controllers/alumno.controller';
+import { getAlumnos, createAlumnos, getAlumnoByLegajo, updateAlumno, deleteAlumno, getAlumnosByCodigoPostal, getAlumnosByFechaDeNacimiento, getAlumnosByCiudadAndSangre, getAlumnosByCalle } from '../controllers/alumno.controller';
 
 export const router = Router();
 
@@ -28,6 +28,25 @@ router
 
 router
 .route('/:leg_alumno')
-.get(getAlumno)
+.get(getAlumnoByLegajo)
 .put(updateAlumno)
 .delete(deleteAlumno)
+
+/* FYI: Para el Iván del futuro: 
+ * El código postal de Batán es el 7601
+ */
+router
+.route('/postal/:cod_postal')
+.get(getAlumnosByCodigoPostal)
+
+router
+.route('/nacimiento/:fecha_nac_alumno')
+.get(getAlumnosByFechaDeNacimiento)
+
+router
+.route('/postal/:cod_postal/sangre/:grupo_sang_alumno')
+.get(getAlumnosByCiudadAndSangre)
+
+router
+.route('/calle/:dom_alumno')
+.get(getAlumnosByCalle)

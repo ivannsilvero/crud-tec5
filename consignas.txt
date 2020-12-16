@@ -1,0 +1,14 @@
+a. Listar todos los Alumnos que viven en la ciudad de Batán (7601).
+a. HECHO /postal/:cod_postal
+
+b. Listar todos los Alumnos que nacieron en el año 2002.  /nacimiento/:fecha_nac_alumno
+b. HECHO /nacimiento/:fecha_nac_alumno
+
+c. Listar todos los Alumnos que viven en la ciudad de Batán y tengan grupo sanguíneo RH-.  /postal/:cod_postal/sangre/:grupo_sang_alumno
+c. HECHO /postal/:cod_postal/sangre/:grupo_sang_alumno 
+
+d. Listar todos los Alumnos ordenados por DNI Ascendente.
+d. HECHO {{url}}/api/alumnos?sort_by=dni_alumno&order=asc
+
+e. Listar todos los Alumnos que viven en la calle Av. J.B. Justo. /calle/:dom_alumno
+e. HECHO

@@ -24,7 +24,19 @@ exports.router
 ], alumno_controller_1.createAlumnos);
 exports.router
     .route('/:leg_alumno')
-    .get(alumno_controller_1.getAlumno)
+    .get(alumno_controller_1.getAlumnoByLegajo)
     .put(alumno_controller_1.updateAlumno)
     .delete(alumno_controller_1.deleteAlumno);
+exports.router
+    .route('/postal/:cod_postal')
+    .get(alumno_controller_1.getAlumnosByCodigoPostal);
+exports.router
+    .route('/nacimiento/:fecha_nac_alumno')
+    .get(alumno_controller_1.getAlumnosByFechaDeNacimiento);
+exports.router
+    .route('/postal/:cod_postal/sangre/:grupo_sang_alumno')
+    .get(alumno_controller_1.getAlumnosByCiudadAndSangre);
+exports.router
+    .route('/calle/:dom_alumno')
+    .get(alumno_controller_1.getAlumnosByCalle);
 //# sourceMappingURL=alumno.routes.js.map
