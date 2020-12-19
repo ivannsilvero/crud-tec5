@@ -1,1 +1,91 @@
-<mxfile host="app.diagrams.net" modified="2020-12-19T22:51:42.319Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" version="14.1.1" etag="6hP980xXKWmfHR-ZX8iv" type="github"><diagram id="Bx-L0jIwDqUiYcygky1f">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-12-19T23:07:04.691Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36" etag="Sz0mXdV-1dPco4Ounuhg" version="14.1.1" type="github">
+  <diagram id="Bx-L0jIwDqUiYcygky1f" name="Page-1">
+    <mxGraphModel dx="2250" dy="1282" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-6" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="165" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-1" value="SISTEMA DE GESTIÓN DE ALUMNOS&lt;br&gt;0" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="130" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-2" value="" style="endArrow=classic;html=1;exitX=1.047;exitY=0.52;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="vtyYr72SYMMWC1jqy1DY-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="284" y="179.8" as="sourcePoint" />
+            <mxPoint x="354" y="179.8" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-4" value="Usuario" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="170" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-5" value="Listar alumno/s" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="245" y="180" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-7" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="160" as="sourcePoint" />
+            <mxPoint x="350" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-8" value="Actualizar alumno" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="275" y="130" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-11" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.177;entryY=0.915;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="vtyYr72SYMMWC1jqy1DY-6" target="vtyYr72SYMMWC1jqy1DY-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="230" as="sourcePoint" />
+            <mxPoint x="210" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="210" y="220" />
+              <mxPoint x="375" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-13" value="Crear/Borrar alumno" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="220" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-14" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=0.167;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.407;exitY=-0.025;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="vtyYr72SYMMWC1jqy1DY-1" target="vtyYr72SYMMWC1jqy1DY-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="110" as="sourcePoint" />
+            <mxPoint x="210" y="110" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="403" y="110" />
+              <mxPoint x="210" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-16" value="Comprobante de modificación/alta o baja de alumno" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="80" width="115" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-17" value="" style="endArrow=classic;html=1;entryX=0.367;entryY=0.967;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="vtyYr72SYMMWC1jqy1DY-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="414" y="210" as="sourcePoint" />
+            <mxPoint x="204" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="414" y="260" />
+              <mxPoint x="202" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-18" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="180" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-19" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="180" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-20" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="180" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-21" value="Text" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="430" y="180" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-23" value="Alumno/s" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;" vertex="1" parent="1">
+          <mxGeometry x="272.5" y="270" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vtyYr72SYMMWC1jqy1DY-24" value="DIAGRAMA DE CONTEXTO" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="20" width="200" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
