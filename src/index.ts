@@ -1,5 +1,5 @@
 import 'reflect-metadata';
-import express from 'express';
+import express, { Request, Response } from 'express';
 import cors from 'cors';
 import { createConnection } from 'typeorm';
 
@@ -32,6 +32,10 @@ const main = async () => {
     app.use(IndexRouter);
 
     app.use(express.static(path.resolve(__dirname, '../public')));
+
+    app.get('*', (_: Request, res: Response) => {
+        res.sendFile( path.resolve(__dirname, '../public', 'index.html') );
+    })
 
     app.listen(PORT, () => {
         console.log(`Servidor corriendo en puerto ${ PORT }`);

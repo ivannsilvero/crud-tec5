@@ -11,4 +11,13 @@ d. Listar todos los Alumnos ordenados por DNI Ascendente.
 d. HECHO {{url}}/api/alumnos?sort_by=dni_alumno&order=asc
 
 e. Listar todos los Alumnos que viven en la calle Av. J.B. Justo. /calle/:dom_alumno
-e. HECHO
+e. 
+
+
+TODOS:
+
+- HACER UN README CON TODO LO NECESARIO
+
+- POPULAR LA BASE DE DATOS DE PRODUCCIÓN
+
+- HACER LOS PUNTOS DE MENDEZ

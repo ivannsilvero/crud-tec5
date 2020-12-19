@@ -39,7 +39,7 @@ const getAlumnoByLegajo = (req, res) => __awaiter(void 0, void 0, void 0, functi
                 msg: `No se encontró un alumno con el legajo ${req.params.leg_alumno}`
             });
         }
-        return res.status(201).json({
+        return res.status(200).json({
             ok: true,
             alumno
         });
@@ -92,7 +92,7 @@ const updateAlumno = (req, res) => __awaiter(void 0, void 0, void 0, function* (
         }
         typeorm_1.getRepository(Alumnos_1.Alumnos).merge(alumno, req.body);
         const result = yield typeorm_1.getRepository(Alumnos_1.Alumnos).save(alumno);
-        return res.status(201).json({
+        return res.status(200).json({
             ok: true,
             msg: 'Alumno actualizado exitosamente',
             result
@@ -122,7 +122,7 @@ const deleteAlumno = (req, res) => __awaiter(void 0, void 0, void 0, function* (
             .from(Alumnos_1.Alumnos)
             .where('leg_alumno = :leg_alumno', { leg_alumno: req.params.leg_alumno })
             .execute();
-        return res.status(201).json({
+        return res.status(204).json({
             ok: true,
             msg: 'Alumnos borrado exitosamente'
         });
@@ -138,7 +138,7 @@ const deleteAlumno = (req, res) => __awaiter(void 0, void 0, void 0, function* (
 exports.deleteAlumno = deleteAlumno;
 const getAlumnosByCodigoPostal = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const alumnos = yield typeorm_1.getRepository(Alumnos_1.Alumnos).find({ where: { cod_postal: req.params.cod_postal } });
-    return res.status(201).json({
+    return res.status(200).json({
         ok: true,
         alumnos
     });
@@ -146,7 +146,7 @@ const getAlumnosByCodigoPostal = (req, res) => __awaiter(void 0, void 0, void 0,
 exports.getAlumnosByCodigoPostal = getAlumnosByCodigoPostal;
 const getAlumnosByFechaDeNacimiento = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const alumnos = yield typeorm_1.getRepository(Alumnos_1.Alumnos).find({ where: { fecha_nac_alumno: typeorm_1.Like(`%${req.params.fecha_nac_alumno}%`) } });
-    return res.status(201).json({
+    return res.status(200).json({
         ok: true,
         alumnos
     });
@@ -154,7 +154,7 @@ const getAlumnosByFechaDeNacimiento = (req, res) => __awaiter(void 0, void 0, vo
 exports.getAlumnosByFechaDeNacimiento = getAlumnosByFechaDeNacimiento;
 const getAlumnosByCiudadAndSangre = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const alumnos = yield typeorm_1.getRepository(Alumnos_1.Alumnos).find({ where: { cod_postal: req.params.cod_postal, grupo_sang_alumno: req.params.grupo_sang_alumno } });
-    return res.status(201).json({
+    return res.status(200).json({
         ok: true,
         alumnos
     });

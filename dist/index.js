@@ -36,6 +36,9 @@ const main = () => __awaiter(void 0, void 0, void 0, function* () {
     app.use(cors_1.default());
     app.use(index_routes_1.app);
     app.use(express_1.default.static(path_1.default.resolve(__dirname, '../public')));
+    app.get('*', (_, res) => {
+        res.sendFile(path_1.default.resolve(__dirname, '../public', 'index.html'));
+    });
     app.listen(PORT, () => {
         console.log(`Servidor corriendo en puerto ${PORT}`);
     });
